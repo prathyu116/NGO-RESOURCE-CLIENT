@@ -30,7 +30,7 @@
       "id": "9682",
       "itemName": "r",
       "category": "r",
-      "quantity": 5
+      "quantity": 1
     }
   ],
   "donors": [
@@ -110,6 +110,41 @@
       "quantity": 34,
       "donorId": null,
       "donationDate": "2025-04-22T10:25:35.023Z"
+    }
+  ],
+  "logistics": [
+    {
+      "id": "log_001",
+      "destination": "Community Shelter Alpha",
+      "inventoryItemId": "item001",
+      "itemName": "Rice Bags (5kg)",
+      "category": "Food Grains",
+      "quantityShipped": 10,
+      "status": "Delivered",
+      "creationDate": "2023-10-27T11:00:00.000Z",
+      "lastUpdateDate": "2025-04-22T11:33:01.420Z"
+    },
+    {
+      "id": "log_002",
+      "destination": "Rural Aid Post Beta",
+      "inventoryItemId": "item002",
+      "itemName": "Blankets",
+      "category": "Bedding",
+      "quantityShipped": 25,
+      "status": "Cancelled",
+      "creationDate": "2023-10-28T09:15:00.000Z",
+      "lastUpdateDate": "2025-04-22T11:33:08.734Z"
+    },
+    {
+      "id": "0e6f",
+      "destination": "dfd",
+      "inventoryItemId": "9682",
+      "itemName": "r",
+      "category": "r",
+      "quantityShipped": 4,
+      "status": "Delivered",
+      "creationDate": "2025-04-22T11:32:15.770Z",
+      "lastUpdateDate": "2025-04-22T11:33:26.377Z"
     }
   ]
 }
