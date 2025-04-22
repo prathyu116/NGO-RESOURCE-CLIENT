@@ -15,9 +15,10 @@ const LogisticsPage = () => {
     <div>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>
-          <FaTruckLoading className="me-2" /> Logistics & Distribution
+          <FaTruckLoading className="me-2 text-warning" /> Logistics &
+          Distribution
         </h2>
-        <Button variant="primary" onClick={handleShowCreateModal}>
+        <Button variant="warning" onClick={handleShowCreateModal}>
           <FaPlus className="me-2" /> Create Shipment
         </Button>
       </div>

@@ -1,7 +1,7 @@
 // src/pages/InventoryPage.jsx
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus,FaBox } from "react-icons/fa";
 import InventoryList from "../components/inventory/InventoryList";
 import AddInventoryModal from "../components/inventory/AddInventoryModal";
 import EditInventoryModal from "../components/inventory/EditInventoryModal"; // Import the new modal
@@ -30,7 +30,11 @@ const InventoryPage = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <h2>Inventory</h2>
+        <h2>
+          {" "}
+          <FaBox className="me-2 text-primary" />
+          Inventory
+        </h2>
         <Button variant="primary" onClick={handleShowAddModal}>
           <FaPlus className="me-2" /> Add Inventory
         </Button>

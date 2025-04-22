@@ -1,10 +1,11 @@
 // src/pages/DonorPage.jsx
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { FaPlus } from "react-icons/fa"; // Import icon for button
+import { FaPlus, FaUsers } from "react-icons/fa"; // Import icon for button
 import DonorList from "../components/donors/DonorList";
 import AddDonorModal from "../components/donors/AddDonorModal";
 import EditDonorModal from "../components/donors/EditDonorModal";
+import { FaTruckLoading } from "react-icons/fa"; // Added icons
 
 const DonorPage = () => {
   // State for controlling modals
@@ -30,8 +31,12 @@ const DonorPage = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Donor Management</h2>
-        <Button variant="primary" onClick={handleShowAddModal}>
+        <h2>
+          {" "}
+          <FaUsers className="me-2 text-success" />
+          Donor Management
+        </h2>
+        <Button variant="success" onClick={handleShowAddModal}>
           <FaPlus className="me-2" /> Add Donor
         </Button>
       </div>
