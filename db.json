@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": "admin001",
+      "email": "admin@ngo.com",
+      "password": "password123",
+      "name": "Admin User"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "item001",
+      "itemName": "Rice Bags (5kg)",
+      "category": "Food Grains",
+      "quantity": 50
+    },
+    {
+      "id": "item002",
+      "itemName": "Blankets",
+      "category": "Bedding",
+      "quantity": 111
+    },
+    {
+      "id": "7180",
+      "itemName": "hhg",
+      "category": "t",
+      "quantity": 39
+    },
+    {
+      "id": "9682",
+      "itemName": "r",
+      "category": "r",
+      "quantity": 5
+    }
+  ],
+  "donors": [
+    {
+      "id": "donor001",
+      "name": "Helping Hands Foundation",
+      "type": "Organization",
+      "contactPerson": "Jane Doe",
+      "email": "jane.doe@helpinghands.org",
+      "phone": "123-456-7890",
+      "address": "123 Charity St, Helping City, HC 12345"
+    },
+    {
+      "id": "donor002",
+      "name": "John Smith",
+      "type": "Individual",
+      "contactPerson": "",
+      "email": "john.smith@email.com",
+      "phone": "987-654-3210",
+      "address": "456 Giving Ave, Generous Town, GT 67890"
+    },
+    {
+      "id": "aca8",
+      "name": "ppr",
+      "type": "Individual",
+      "contactPerson": "",
+      "email": "prathyuprrasad116@gmail.com",
+      "phone": "9188739054",
+      "address": "Kanhirapoil (po) near IHRD madikkai coll\nKasaragod"
+    }
+  ],
+  "donations": [
+    {
+      "id": "don_001",
+      "donorId": "donor001",
+      "itemName": "Rice Bags (5kg)",
+      "category": "Food Grains",
+      "quantity": 20,
+      "donationDate": "2023-10-27T10:00:00.000Z"
+    },
+    {
+      "id": "don_002",
+      "donorId": "donor002",
+      "itemName": "Blankets",
+      "category": "Bedding",
+      "quantity": 50,
+      "donationDate": "2023-10-26T15:30:00.000Z"
+    },
+    {
+      "id": "2a1e",
+      "itemName": "Blanket",
+      "category": "Bedding",
+      "quantity": 10,
+      "donorId": null,
+      "donationDate": "2025-04-22T10:12:48.600Z"
+    },
+    {
+      "id": "faf7",
+      "itemName": "Blankets",
+      "category": "Bedding",
+      "quantity": 11,
+      "donorId": null,
+      "donationDate": "2025-04-22T10:14:32.782Z"
+    },
+    {
+      "id": "cab8",
+      "itemName": "r",
+      "category": "r",
+      "quantity": 5,
+      "donorId": "aca8",
+      "donationDate": "2025-04-22T10:20:30.208Z"
+    },
+    {
+      "id": "7fb1",
+      "itemName": "hhg",
+      "category": "Bedding",
+      "quantity": 34,
+      "donorId": null,
+      "donationDate": "2025-04-22T10:25:35.023Z"
+    }
+  ]
+}
