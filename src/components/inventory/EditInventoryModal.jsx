@@ -9,6 +9,7 @@ import {
 } from "../../redux/features/inventory/inventorySlice";
 
 const EditInventoryModal = ({ show, handleClose, itemToEdit }) => {
+  console.log("ite,mToEdit", itemToEdit);
   const [itemName, setItemName] = useState("");
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");

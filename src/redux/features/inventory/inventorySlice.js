@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const API_URL = 'http://localhost:5001/inventory';
+const API_URL_DELETE = 'http://localhost:5001/delete-item'; 
 
 // Async Thunks
 export const fetchInventory = createAsyncThunk(
@@ -32,8 +33,9 @@ export const addInventoryItem = createAsyncThunk(
 export const deleteInventoryItem = createAsyncThunk(
     'inventory/deleteInventoryItem',
     async (itemId, { rejectWithValue }) => {
+        console.log("Deleting item with ID:", typeof itemId);
         try {
-            await axios.delete(`${API_URL}/${itemId}`);
+            const res = await axios.post(API_URL_DELETE, { id: itemId, type: 'inventory' });
             return itemId;
         } catch (error) {
             return rejectWithValue(error.response?.data || 'Failed to delete item');
@@ -44,6 +46,8 @@ export const deleteInventoryItem = createAsyncThunk(
 export const updateInventoryItem = createAsyncThunk(
     'inventory/updateInventoryItem',
     async ({ id, updatedData }, { rejectWithValue }) => {
+        console.log("Deleting item with ID:", typeof id);
+
         try {
             const response = await axios.put(`${API_URL}/${id}`, updatedData);
             return response.data;

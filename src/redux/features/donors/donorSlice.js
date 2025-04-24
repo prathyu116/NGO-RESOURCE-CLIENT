@@ -4,6 +4,7 @@ import axios from 'axios';
 
 // Define a constant for the API URL
 const DONORS_API_URL = 'http://localhost:5001/donors'; // Make sure this matches your json-server port
+const API_URL_DELETE = 'http://localhost:5001/delete-item'; // For delete operation
 
 // --- Async Thunks ---
 
@@ -54,8 +55,8 @@ export const deleteDonor = createAsyncThunk(
     'donors/deleteDonor',
     async (donorId, { rejectWithValue }) => {
         try {
-            await axios.delete(`${DONORS_API_URL}/${donorId}`);
-            return donorId; // Return the ID of the deleted donor for removal from state
+            await axios.post(API_URL_DELETE, { id: donorId, type: 'donors' });
+            return donorId; 
         } catch (error) {
             return rejectWithValue(error.response?.data || 'Failed to delete donor');
         }
