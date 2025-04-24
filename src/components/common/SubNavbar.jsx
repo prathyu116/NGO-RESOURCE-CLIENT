@@ -1,51 +1,72 @@
 // src/components/common/SubNavbar.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaBox, FaUsers, FaTruckLoading } from "react-icons/fa"; // Import icons
 
 const SubNavbar = () => {
+  // Define base classes for all links
+  const baseClasses =
+    "nav-link d-flex align-items-center px-3 py-2 rounded mx-1"; // Added padding, rounding, margin, flex alignment
+  const inactiveClasses = "text-dark"; // Text color for inactive links
+
+  // Define active classes specific to each link
+  const activeInventoryClasses = "bg-primary text-white shadow-sm fw-bold"; // Blue background, white text, shadow, bold
+  const activeDonorsClasses = "bg-success text-white shadow-sm fw-bold"; // Green background, white text, shadow, bold
+  const activeLogisticsClasses = "bg-warning text-white shadow-sm fw-bold"; // Green background, white text, shadow, bold
+
   return (
-    // Expand at small breakpoint
+    // Keep the existing navbar structure
     <nav className="navbar navbar-expand-sm navbar-light bg-light shadow-sm mb-4">
       {/* Centering container */}
       <div className="container-fluid d-flex justify-content-center">
-        {/* No toggler needed for just 3 items unless preferred */}
-        {/* Links */}
+        {/* Use nav-pills for button-like styling */}
         <ul className="navbar-nav nav-pills">
-          {" "}
-          {/* nav-pills for styling */}
+          {/* Inventory Link */}
           <li className="nav-item">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
+                `${baseClasses} ${
+                  isActive ? activeInventoryClasses : inactiveClasses
+                }`
               }
               to="/inventory"
-              end
+              end // Ensure only exact match is active
+              title="Inventory Management" // Tooltip for accessibility/clarity
             >
-              Inventory
-              {/* Shorten text for smaller screens if needed */}
-              {/* <span className="d-none d-sm-inline"> Management</span> */}
+              <FaBox className="me-2" size="1.1em" /> {/* Icon with margin */}
+              <span>Inventory</span>
             </NavLink>
           </li>
+
+          {/* Donors Link */}
           <li className="nav-item">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
+                `${baseClasses} ${
+                  isActive ? activeDonorsClasses : inactiveClasses
+                }`
               }
-              to="/donors"
+              to="/donors" // Matches /donors and /donors/:id - adjust 'end' prop if needed later
+              title="Donor Management"
             >
-              Donors
-              {/* <span className="d-none d-sm-inline"> Management</span> */}
+              <FaUsers className="me-2" size="1.1em" />
+              <span>Donors</span>
             </NavLink>
           </li>
+
+          {/* Logistics Link */}
           <li className="nav-item">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
+                `${baseClasses} ${
+                  isActive ? activeLogisticsClasses : inactiveClasses
+                }`
               }
               to="/logistics"
+              title="Logistics & Distribution"
             >
-              Logistics
-              {/* <span className="d-none d-sm-inline"> & Distribution</span> */}
+              <FaTruckLoading className="me-2" size="1.1em" />
+              <span>Logistics</span>
             </NavLink>
           </li>
         </ul>
