@@ -8,7 +8,7 @@ export const loginUser = createAsyncThunk(
         try {
             // In a real app, this would be a POST request
             // For json-server, we GET and filter (simplification for demo)
-            const response = await axios.get(`http://localhost:5001/users?email=${email}&password=${password}`);
+            const response = await axios.get(`https://renderdb-btaz.onrender.com/users?email=${email}&password=${password}`);
             if (response.data.length > 0) {
                 const user = response.data[0];
                 // Store minimal user data (don't store password!)

@@ -2,8 +2,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5001/inventory';
-const API_URL_DELETE = 'http://localhost:5001/delete-item'; 
+const API_URL = 'https://renderdb-btaz.onrender.com/inventory';
+const API_URL_DELETE = 'https://renderdb-btaz.onrender.com/delete-item'; 
 
 // Async Thunks
 export const fetchInventory = createAsyncThunk(
@@ -35,9 +35,12 @@ export const deleteInventoryItem = createAsyncThunk(
     async (itemId, { rejectWithValue }) => {
         console.log("Deleting item with ID:", typeof itemId);
         try {
-            const res = await axios.post(API_URL_DELETE, { id: itemId, type: 'inventory' });
+            await axios.delete("https://renderdb-btaz.onrender.com/inventory/"+itemId); 
             return itemId;
         } catch (error) {
+            if(error.response.status === 500) {
+                return itemId;
+            }
             return rejectWithValue(error.response?.data || 'Failed to delete item');
         }
     }

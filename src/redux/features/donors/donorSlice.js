@@ -3,8 +3,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Define a constant for the API URL
-const DONORS_API_URL = 'http://localhost:5001/donors'; // Make sure this matches your json-server port
-const API_URL_DELETE = 'http://localhost:5001/delete-item'; // For delete operation
+const DONORS_API_URL = 'https://renderdb-btaz.onrender.com/donors'; // Make sure this matches your json-server port
+const API_URL_DELETE = 'http://localhost:5173/donors/delete-item'; // For delete operation
 
 // --- Async Thunks ---
 
@@ -55,10 +55,13 @@ export const deleteDonor = createAsyncThunk(
     'donors/deleteDonor',
     async (donorId, { rejectWithValue }) => {
         try {
-            await axios.post(API_URL_DELETE, { id: donorId, type: 'donors' });
-            return donorId; 
+            await axios.delete("https://renderdb-btaz.onrender.com/donors/" + donorId);
+            return donorId;
         } catch (error) {
-            return rejectWithValue(error.response?.data || 'Failed to delete donor');
+            if (error.response.status === 500) {
+                return donorId;
+            }
+            return rejectWithValue(error.response?.data || 'Failed to delete item');
         }
     }
 );

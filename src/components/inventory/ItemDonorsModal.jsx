@@ -10,8 +10,8 @@ import {
 } from "../../redux/features/donations/donationSlice"; // Import actions
 
 // API URLs (Consider moving to a config file)
-const DONATIONS_API_URL = "http://localhost:5001/donations";
-const DONORS_API_URL = "http://localhost:5001/donors";
+const DONATIONS_API_URL = "https://renderdb-btaz.onrender.com/donations";
+const DONORS_API_URL = "https://renderdb-btaz.onrender.com/donors";
 
 const ItemDonorsModal = ({ show, handleClose, item }) => {
   const dispatch = useDispatch();

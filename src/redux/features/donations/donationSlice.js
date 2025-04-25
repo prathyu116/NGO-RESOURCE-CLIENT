@@ -3,9 +3,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { addInventoryItem, updateInventoryItem, fetchInventory } from '../inventory/inventorySlice'; // Import inventory actions
 
-const DONATIONS_API_URL = 'http://localhost:5001/donations';
-const INVENTORY_API_URL = 'http://localhost:5001/inventory';
-const DONORS_API_URL = 'http://localhost:5001/donors';
+const DONATIONS_API_URL = 'https://renderdb-btaz.onrender.com/donations';
+const INVENTORY_API_URL = 'https://renderdb-btaz.onrender.com/inventory';
+const DONORS_API_URL = 'https://renderdb-btaz.onrender.com/donors';
 
 // --- Async Thunks ---
 
