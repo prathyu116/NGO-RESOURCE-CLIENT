@@ -1,4 +1,3 @@
-// src/components/common/SubNavbar.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaBox, FaUsers, FaTruckLoading } from "react-icons/fa"; // Import icons

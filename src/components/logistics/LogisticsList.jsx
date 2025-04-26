@@ -1,4 +1,3 @@
-// src/components/logistics/LogisticsList.jsx
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Table, Spinner, Alert, Badge, Form, Button } from "react-bootstrap"; // Added Form, Button

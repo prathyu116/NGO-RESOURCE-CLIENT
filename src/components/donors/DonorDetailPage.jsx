@@ -1,4 +1,3 @@
-// src/pages/DonorDetailPage.jsx
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";

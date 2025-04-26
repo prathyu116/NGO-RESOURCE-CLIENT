@@ -1,4 +1,3 @@
-// src/pages/DonorPage.jsx
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPlus, FaUsers } from "react-icons/fa"; // Import icon for button

@@ -1,4 +1,3 @@
-// src/pages/LogisticsPage.jsx
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPlus, FaTruckLoading } from "react-icons/fa"; // Added icons

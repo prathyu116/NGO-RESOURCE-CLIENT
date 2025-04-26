@@ -1,4 +1,3 @@
-// src/redux/features/logistics/logisticsSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { updateInventoryItem, fetchInventory } from '../inventory/inventorySlice'; // Import inventory action

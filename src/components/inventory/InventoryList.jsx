@@ -1,4 +1,3 @@
-// src/components/inventory/InventoryList.jsx
 import React, { useEffect, useState } from "react"; // Added useState
 import { useSelector, useDispatch } from "react-redux";
 import { Table, Button, Spinner, Alert } from "react-bootstrap";

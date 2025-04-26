@@ -1,4 +1,3 @@
-// src/components/logistics/CreateShipmentModal.jsx
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form, Spinner, Alert, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";

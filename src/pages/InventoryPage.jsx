@@ -1,4 +1,3 @@
-// src/pages/InventoryPage.jsx
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPlus,FaBox } from "react-icons/fa";

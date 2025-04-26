@@ -1,4 +1,3 @@
-// src/components/donors/DonorList.jsx
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Table, Button, Spinner, Alert } from "react-bootstrap";

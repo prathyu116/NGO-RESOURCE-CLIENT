@@ -1,4 +1,3 @@
-// src/components/inventory/ItemDonorsModal.jsx
 import React, { useEffect, useState } from "react";
 import { Modal, Button, Spinner, Alert, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
