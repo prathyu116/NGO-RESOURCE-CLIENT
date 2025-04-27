@@ -40,7 +40,7 @@ A web application designed to help Non-Governmental Organizations (NGOs) manage 
     *   Bootstrap (`v5+`)
     *   Axios
     *   React Icons
-*   **Backend (Mock):**
+*   **Backend **
     *  nodejs + express
     *  mongodb
 *   **State Management:**
